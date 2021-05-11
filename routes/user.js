@@ -29,7 +29,7 @@ router.get("/:id",async (req,res)=>{
 router.get("/getBasics/:id",async (req,res)=>{
     try{
         const id=req.params.id;
-        const userInfo=await User.findById({_id: id},{_id:0,firstname: 1,lastname: 1,email: 1,contacts: 1})
+        const userInfo=await User.findById({_id: id})
         if(!userInfo){
             res.status(404).json({
                 error: "Data not found"
