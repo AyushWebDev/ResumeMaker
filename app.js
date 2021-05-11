@@ -20,11 +20,13 @@ const userRouter=require("./routes/user");
 const eduRouter=require("./routes/edu");
 const workRouter=require("./routes/work");
 const achievementRouter=require("./routes/achievements");
+const skillRouter=require("./routes/skills");
 
 app.use("/user",userRouter);
 app.use("/edu",eduRouter);
 app.use("/work",workRouter);
-app.use("/achievement",workRouter);
+app.use("/achievement",achievementRouter);
+app.use("/skill",skillRouter);
 
 app.listen(8000,()=>{
     console.log("server is listening on port 8000");
