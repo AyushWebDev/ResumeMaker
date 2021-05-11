@@ -20,7 +20,7 @@ router.get("/:id",async (req,res)=>{
     }
 })
 
-router.patch("/:id",async (req,res)=>{
+router.put("/:id",async (req,res)=>{
     try{
         const id=req.params.id;
         const updatedData=await User.findByIdAndUpdate({_id: id},
@@ -32,7 +32,7 @@ router.patch("/:id",async (req,res)=>{
     }
 })
 
-router.patch("/remove/:id",async (req,res)=>{
+router.put("/remove/:id",async (req,res)=>{
     try{
         const id=req.params.id;
         const deletedData=await User.findByIdAndUpdate({_id: id},
